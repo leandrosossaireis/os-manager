@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OS Manager</title>
+  </head>
+  <body class="flex flex-col bg-indigo-950 min-h-screen">
+    <!-- Cabeçalho -->
+    <header class="flex bg-indigo-950 justify-between items-center h-16 py-2 px-4 border-b-2 border-indigo-800">
+      <div><h2 class="text-lg font-bold text-indigo-50">OS Manager</h2></div>
+      <div><h2 class="text-lg font-bold text-indigo-50">Usuário</h2></div>
+    </header>
+    <!-- Menu Lateral -->
+    <div class="flex flex-1">
+      <aside class="w-64 bg-indigo-950 py-8 px-4">
+        <!-- Navegação -->
+        <nav>
+          <ul class="flex flex-col gap-2">
+            <li><a class="menu-link" href="/">Dashboard</a></li>
+            <li><a class="menu-link" href="/">Clientes</a></li>
+            <li><a class="menu-link" href="/">Ordem de Serviço</a></li>
+            <li><a class="menu-link" href="/">Equipes</a></li>
+            <li><a class="menu-link" href="/">Agenda</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <!-- Conteudo Principal -->
+      <main class="flex-1 bg-indigo-700 py-8 px-16">
+        <!-- Parte da Dashboard -->
+        <section>
+          <h1 class="text-2xl">Dashboard</h1>
+          <p>Visão global das ordens de serviço</p>
+        </section>
+        <section class="flex justify-around">
+          <div class="card-dashboard">
+            <h2>Ordens em Aberto</h2>
+            <p>24</p>
+          </div>
+          <div class="card-dashboard">
+            <h2>Em andamento</h2>
+            <p>8</p>
+          </div>
+          <div class="card-dashboard">
+            <h2>Concluídas</h2>
+            <p>156</p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <!-- Rodapé -->
+    <footer class="flex items-center justify-center bg-indigo-950 h-8 py-2 border-t border-indigo-800">
+      <p>OS Manager</p>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

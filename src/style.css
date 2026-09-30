@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --color-indigo-50: #F4F5FA;
+  --color-indigo-250: #B6B8E7;
+  --color-indigo-500: #3237C3;
+  --color-indigo-700: #2A2C74;
+  --color-indigo-950: #101123;
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { 
+  box-sizing: border-box; 
+}
+
+* {
+   margin: 0;
+}
+
+img, svg { 
+  display: block; 
+  max-width: 100%; 
+}
+
+.menu-link{
+  @apply 
+  block 
+  w-full 
+  rounded-xl 
+  py-2 px-3   
+  text-white
+}
+.menu-link:hover{
+  @apply
+  hover:bg-indigo-250 transition-colors  duration-500
+}
+.card-dashboard{
+  @apply
+  flex
+  flex-col
+  bg-indigo-250 
+  w-64
+  rounded-xl
+  py-2 px-3
+  items-center
+  gap-2
+}

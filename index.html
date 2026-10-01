@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OS Manager</title>
   </head>
-  <body class="flex flex-col bg-indigo-950 min-h-screen">
+  <body class="flex flex-col min-h-screen">
     <!-- Cabeçalho -->
-    <header class="flex bg-indigo-950 justify-between items-center h-16 py-2 px-4 border-b-2 border-indigo-800">
-      <div><h2 class="text-lg font-bold text-indigo-50">OS Manager</h2></div>
-      <div><h2 class="text-lg font-bold text-indigo-50">Usuário</h2></div>
+    <header class="flex bg-background justify-between items-center h-16 py-2 px-4 border-b-2 border-surface ">
+      <div><h2 class="text-lg font-bold ">OS Manager</h2></div>
+      <div><h2 class="text-lg font-bold ">Usuário</h2></div>
     </header>
     <!-- Menu Lateral -->
     <div class="flex flex-1">
-      <aside class="w-64 bg-indigo-950 py-8 px-4">
+      <aside class="w-64 bg-background py-8 px-4">
         <!-- Navegação -->
         <nav>
           <ul class="flex flex-col gap-2">
-            <li><a class="menu-link" href="/">Dashboard</a></li>
+            <li><a class="menu-link active" href="/">Dashboard</a></li>
             <li><a class="menu-link" href="/">Clientes</a></li>
             <li><a class="menu-link" href="/">Ordem de Serviço</a></li>
             <li><a class="menu-link" href="/">Equipes</a></li>
@@ -26,15 +26,15 @@
         </nav>
       </aside>
       <!-- Conteudo Principal -->
-      <main class="flex-1 bg-indigo-700 py-8 px-16">
+      <main class="flex flex-col flex-1 gap-8 bg-surface py-8 px-16">
         <!-- Parte da Dashboard -->
-        <section>
+        <section class="mb-8">
           <h1 class="text-2xl">Dashboard</h1>
           <p>Visão global das ordens de serviço</p>
         </section>
-        <section class="flex justify-around">
+        <section class="grid grid-cols-3 gap-6">
           <div class="card-dashboard">
-            <h2>Ordens em Aberto</h2>
+            <h2 >Ordens em Aberto</h2>
             <p>24</p>
           </div>
           <div class="card-dashboard">
@@ -49,7 +49,7 @@
       </main>
     </div>
     <!-- Rodapé -->
-    <footer class="flex items-center justify-center bg-indigo-950 h-8 py-2 border-t border-indigo-800">
+    <footer class="flex items-center justify-center bg-background h-8 py-2 border-t border-surface">
       <p>OS Manager</p>
     </footer>
     <script type="module" src="/src/main.js"></script>

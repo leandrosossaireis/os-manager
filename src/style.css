@@ -3,11 +3,30 @@
 @theme {
   --font-sans: "Inter", sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
-  --color-indigo-50: #F4F5FA;
-  --color-indigo-250: #B6B8E7;
-  --color-indigo-500: #3237C3;
-  --color-indigo-700: #2A2C74;
-  --color-indigo-950: #101123;
+
+    /* Cores principais */
+  --color-primary: #0265F2;
+  --color-secondary: #3D35DE;
+  --color-accent: #EA8D0A;
+
+  /* Escala da cor principal */
+  --color-primary-50: #F3F7FB;
+  --color-primary-100: #CADBF3;
+  --color-primary-200: #9BBEEF;
+  --color-primary-300: #69A1F0;
+  --color-primary-400: #3182F5;
+  --color-primary-500: #0265F2;
+  --color-primary-600: #0251C2;
+  --color-primary-700: #013D92;
+  --color-primary-800: #012962;
+  --color-primary-900: #011532;
+
+  /* Neutros */
+  --color-background: #F6F7F8;
+  --color-surface: #FFFFFF;
+  --color-text: #1A222E;
+  --color-border: #D9DEE5;
+
 }
 
 /* ---------- Reset ---------- */
@@ -17,6 +36,8 @@
 
 * {
    margin: 0;
+   text-decoration: none;
+   color: var(--color-text);
 }
 
 img, svg { 
@@ -27,23 +48,46 @@ img, svg {
 .menu-link{
   @apply 
   block 
-  w-full 
-  rounded-xl 
-  py-2 px-3   
-  text-white
+  w-full  
+  py-2 px-3
+  transition-colors
+  duration-200
 }
+
 .menu-link:hover{
   @apply
-  hover:bg-indigo-250 transition-colors  duration-500
+  bg-primary-100
+  border-l-2
+  border-primary-600
 }
+
+.menu-link.active{
+  @apply
+  bg-primary-600 
+  border-l-2
+  text-white
+}
+
 .card-dashboard{
   @apply
   flex
   flex-col
-  bg-indigo-250 
-  w-64
   rounded-xl
-  py-2 px-3
+  py-6
   items-center
   gap-2
+  bg-primary-50
+  shadow-md
+}
+.card-dashboard h2{
+  @apply
+  text-lg
+  font-semibold
+}
+
+.card-dashboard p{
+  @apply
+  text-2xl
+  font-bold
+  text-primary-600
 }

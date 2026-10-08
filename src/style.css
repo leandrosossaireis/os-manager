@@ -90,9 +90,52 @@ img, svg {
   opacity-70
 }
 
+.card-dashboard h3{
+  @apply
+  text-base
+  font-bold
+  text-text
+}
+
 .card-dashboard p{
   @apply
   text-2xl
   font-bold
   text-text
+}
+
+.status-processing{
+  @apply
+  text-orange-500 bg-orange-200 
+}
+.status-success{
+  @apply
+  text-green-500 bg-green-200  
+}
+
+.title-table{
+  @apply
+  px-4
+  py-2
+  text-left
+  text-xs
+  font-medium
+  text-text
+  uppercase
+  opacity-70
+}
+
+.info-table{
+  @apply
+  px-4
+  py-2
+  text-left
+  text-sm
+  text-text
+}
+tr:hover{
+  @apply
+  bg-primary-50
+  transition-colors
+  cursor-pointer
 }

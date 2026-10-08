@@ -37,7 +37,6 @@
 * {
    margin: 0;
    text-decoration: none;
-   color: var(--color-text);
 }
 
 img, svg { 
@@ -47,7 +46,10 @@ img, svg {
 
 .menu-link{
   @apply 
-  block 
+  flex
+  items-center
+  gap-2
+  text-text
   w-full  
   py-2 px-3
   transition-colors
@@ -56,7 +58,7 @@ img, svg {
 
 .menu-link:hover{
   @apply
-  bg-primary-100
+  bg-primary-50
   border-l-2
   border-primary-600
 }
@@ -72,22 +74,25 @@ img, svg {
   @apply
   flex
   flex-col
-  rounded-xl
-  py-6
-  items-center
+  rounded-lg
+  p-6
   gap-2
-  bg-primary-50
+  bg-surface
+  border
+  border-border
   shadow-md
 }
-.card-dashboard h2{
+
+.card-dashboard h2, .card-dashboard span{
   @apply
-  text-lg
-  font-semibold
+  text-xs
+  text-text
+  opacity-70
 }
 
 .card-dashboard p{
   @apply
   text-2xl
   font-bold
-  text-primary-600
+  text-text
 }

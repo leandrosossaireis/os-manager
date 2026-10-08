@@ -7,49 +7,100 @@
   </head>
   <body class="flex flex-col min-h-screen">
     <!-- Cabeçalho -->
-    <header class="flex bg-background justify-between items-center h-16 py-2 px-4 border-b-2 border-surface ">
-      <div><h2 class="text-lg font-bold ">OS Manager</h2></div>
-      <div><h2 class="text-lg font-bold ">Usuário</h2></div>
+    <header class="flex bg-surface justify-between items-center h-16 py-2 px-4 border-b-2 gap-20 border-border ">
+      <div class="flex flex-row gap-4 w-full items-center">
+        <h2 class="w-64 text-lg font-bold text-primary-700">OS Manager</h2>
+        <input type="text" placeholder="Buscar Ordem de Serviço..." class="w-full py-2 px-4 rounded-md border border-border focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent">
+      
+        <i data-lucide="bell" class="w-6 h-6 text-text opacity-80 hover:opacity-100 hover:text-primary-700 cursor-pointer "></i>
+        <div class="w-10 h-8 rounded-full bg-primary-100 text-primary-700 flex items-center justify-center font-bold">US</div>
+        <h2 class="text-sm font-medium text-text">Usuário</h2>
+        <i data-lucide="chevron-down" class="w-6 h-6 text-text opacity-70 hover:opacity-100 hover:text-primary-700 cursor-pointer"></i>
+      </div>
     </header>
     <!-- Menu Lateral -->
-    <div class="flex flex-1">
-      <aside class="w-64 bg-background py-8 px-4">
+    <div class="flex flex-12">
+      <aside class="w-64 bg-surface py-8 px-4">
         <!-- Navegação -->
         <nav>
           <ul class="flex flex-col gap-2">
-            <li><a class="menu-link active" href="/">Dashboard</a></li>
-            <li><a class="menu-link" href="/">Clientes</a></li>
-            <li><a class="menu-link" href="/">Ordem de Serviço</a></li>
-            <li><a class="menu-link" href="/">Equipes</a></li>
-            <li><a class="menu-link" href="/">Agenda</a></li>
+            <div class="text-xs font-medium text-text opacity-70">OPERAÇÃO</div>
+            <li><a class="menu-link active" href="/">
+              <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+              <span>Dashboard</span></a></li>
+            <li><a class="menu-link" href="/">
+              <i data-lucide="clipboard-list" class="w-4 h-4"></i>
+              <span>Ordem de Serviço</span></a></li>
+            <li><a class="menu-link" href="/">
+              <i data-lucide="calendar" class="w-4 h-4"></i>
+              <span>Agenda</span></a></li>
+            <div class="text-xs font-medium text-text opacity-70">CADASTRO</div>
+            <li><a class="menu-link" href="/">
+              <i data-lucide="users" class="w-4 h-4"></i>
+              <span>Clientes</span></a></li>
+            <li><a class="menu-link" href="/">
+              <i data-lucide="users" class="w-4 h-4"></i>
+              <span>Equipes</span></a></li>
+            <div class="text-xs font-medium text-text opacity-70">SISTEMA</div>
+            <li><a class="menu-link" href="/">
+              <i data-lucide="rotate-ccw-clock" class="w-4 h-4"></i>
+              <span>Historico</span></a></li>
           </ul>
         </nav>
       </aside>
       <!-- Conteudo Principal -->
-      <main class="flex flex-col flex-1 gap-8 bg-surface py-8 px-16">
+      <main class="flex flex-col flex-1 gap-6 bg-background py-8 px-16">
         <!-- Parte da Dashboard -->
-        <section class="mb-8">
-          <h1 class="text-2xl">Dashboard</h1>
-          <p>Visão global das ordens de serviço</p>
+        <span class="text-sm text-text opacity-70">Operação / Dashboard</span>
+        <section class="flex flex-row justify-between gap-4">
+          <div>
+            <h1 class="text-2xl font-semibold">Dashboard</h1>
+            <p class="text-text opacity-70 text-sm">Visão global das Operações</p>
+          </div>
+          <button class="flex flex-row items-center bg-primary-600 text-white py-2 px-4 gap-2 rounded-md hover:bg-primary-700 transition-colors">
+            <i data-lucide="plus" class="w-4 h-4"></i>
+            Nova Ordem de Serviço
+          </button>
         </section>
-        <section class="grid grid-cols-3 gap-6">
+
+        <section class="grid grid-cols-4 gap-4">
           <div class="card-dashboard">
-            <h2 >Ordens em Aberto</h2>
+            <div class="flex flex-row items-center justify-between w-full">
+              <h2>Ordens em Aberto</h2>
+              <i data-lucide="clipboard-list" class="w-4 h-4 text-text opacity-70"></i>
+            </div>
             <p>24</p>
+            <span>Última OS aberta há 2 dias</span>
           </div>
           <div class="card-dashboard">
+          <div class="flex flex-row items-center justify-between w-full">
             <h2>Em andamento</h2>
-            <p>8</p>
+            <i data-lucide="wrench" class="w-4 h-4 text-text opacity-70"></i>
           </div>
-          <div class="card-dashboard">
+            <p>8</p>
+            <span>3 equipes em campo</span>
+          </div>
+          <div class="card-dashboard flex">
+            <div class="flex flex-row items-center justify-between w-full">
+            <h2>Agendadas</h2>
+            <i data-lucide="calendar" class="w-4 h-4 text-text opacity-70"></i>
+            </div>
+            <p>8</p>
+            <span>4 visitas hoje</span>
+          </div>
+          <div class="card-dashboard flex">
+            <div class="flex flex-row items-center justify-between w-full">
             <h2>Concluídas</h2>
-            <p>156</p>
+            <i data-lucide="check-circle" class="w-4 h-4 text-text opacity-70"></i>
+            </div>
+            <p>115</p>
+            <span>18 a mais que o mês anterior</span>
           </div>
         </section>
       </main>
     </div>
     <!-- Rodapé -->
-    <footer class="flex items-center justify-center bg-background h-8 py-2 border-t border-surface">
+    <footer class="flex items-center justify-center bg-surface h-8 py-2 border-t border-border">
       <p>OS Manager</p>
     </footer>
     <script type="module" src="/src/main.js"></script>

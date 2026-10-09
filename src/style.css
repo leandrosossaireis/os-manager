@@ -114,7 +114,16 @@ img, svg {
   @apply
   text-green-500 
   bg-green-200
-  w-42
+}
+
+.status-scheduled {
+  @apply text-blue-700 bg-blue-100;
+}
+
+.status-processing,
+.status-success,
+.status-scheduled {
+  @apply inline-flex items-center rounded-full px-2 py-1 text-xs font-medium;
 }
 
 .title-table{

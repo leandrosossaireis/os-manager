@@ -10,7 +10,7 @@
     <header class="flex bg-surface justify-between items-center h-16 py-2 px-4 border-b-2 gap-20 border-border ">
       <div class="flex flex-row gap-4 w-full items-center">
         <h2 class="w-64 text-lg font-bold text-primary-700">OS Manager</h2>
-        <input type="text" placeholder="Buscar Ordem de Serviço..." class="w-full py-2 px-4 rounded-md border border-border focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent">
+        <input id="search-input" type="text" placeholder="Buscar por ID, cliente ou equipe..." class="w-full py-2 px-4 rounded-md border border-border focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent">
       
         <i data-lucide="bell" class="w-6 h-6 text-text opacity-80 hover:opacity-100 hover:text-primary-700 cursor-pointer "></i>
         <div class="w-10 h-8 rounded-full bg-primary-100 text-primary-700 flex items-center justify-center font-bold">US</div>
@@ -114,24 +114,8 @@
                   <th class="title-table">Ações</th>
                 </tr>
               </thead>
-              <tbody class="divide-y divide-slate-200">
-                <tr >
-                  <td class="info-table" >001</td>
-                  <td class="info-table">João Silva</td>
-                  <td class="info-table">Equipe A</td>
-                  <td class="info-table status-processing">Em andamento</td>
-                  <td class="info-table">2024-06-01</td>
-                  <td class="info-table"><button class="bg-primary-600 text-white py-1 px-2 rounded-md hover:bg-primary-700 transition-colors">...</button></td>
-                </tr>
-                <tr >
-                  <td class="info-table">002</td>
-                  <td class="info-table">Maria Oliveira</td>
-                  <td class="info-table">Equipe B</td>
-                  <td class="info-table status-success">Concluída</td>
-                  <td class="info-table">2024-06-02</td>
-                  <td class="info-table"><button class="bg-primary-600 text-white py-1 px-2 rounded-md hover:bg-primary-700 transition-colors">...</button></td>
-                </tr>
-                <!-- Adicione mais linhas conforme necessário -->
+              <tbody id="list-OS" class="divide-y divide-slate-200">
+                
             </table>
           </div>
         </section>
